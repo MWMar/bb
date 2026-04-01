@@ -149,7 +149,10 @@ fetch(sheetURL)
 
       /* KOLUMNA ZE ZDJĘCIAMI */
       if (i !== 0) {
-        const index = row[0].trim().replace(/\r/g, "");
+        const index = row[0]
+        .trim()
+        .replace(/\r/g, "")
+        .replace(/\s/g, "");
         const td = document.createElement("td");
         td.className = "images";
 
